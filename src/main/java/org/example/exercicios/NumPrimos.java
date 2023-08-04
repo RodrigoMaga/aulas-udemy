@@ -9,11 +9,12 @@ public class NumPrimos {
         System.out.print("Digite um numero: ");
         int number = scanner.nextInt();
 
-        for (int i = 2; i <= number; i++){
-            if (i < number && number % i == 0){
-
+        for (int i = 3; i < number; i++){
+            if (number % i == 0 || number == 4){
+                System.out.println("O numero " + number + " nao e primo ");
+                return;
             }
         }
-        System.out.println(number);
+        System.out.println("O numero " + number + " e primo");
     }
 }
