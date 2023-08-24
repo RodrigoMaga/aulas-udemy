@@ -34,4 +34,17 @@ public class EstruturasSequenciais6 {
         System.out.printf("RETANGULO: %.3f%n", areaRetangulo);
 
     }
+
+    private static void askInputs(FormasGeometricas formasGeometricas) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Informe o valor de A: " + formasGeometricas.getClass().getName());
+        formasGeometricas.A = scanner.nextDouble();
+        System.out.print("Informe o valor de B: " + formasGeometricas.getClass().getName());
+        formasGeometricas.B = scanner.nextDouble();
+        System.out.print("Informe o valor de C: " + formasGeometricas.getClass().getName());
+        formasGeometricas.C = scanner.nextDouble();
+    }
+
 }
