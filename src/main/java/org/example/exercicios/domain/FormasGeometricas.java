@@ -1,10 +1,15 @@
 package org.example.exercicios.domain;
 
-public class FormasGeometricas {
+public abstract class FormasGeometricas {
     public double A, B, C;
 
-    public double calcularArea() {
 
-        return 0;
-    };
+    public FormasGeometricas(double A,double B,double C){
+        this.A = A;
+        this.B = B;
+        this.C = C;
+    }
+
+    public abstract double calcularArea();
+    public abstract String getTitle();
 }
