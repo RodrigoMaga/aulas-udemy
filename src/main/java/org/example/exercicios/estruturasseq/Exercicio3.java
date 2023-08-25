@@ -1,8 +1,8 @@
-package org.example.exercicios;
+package org.example.exercicios.estruturasseq;
 
 import java.util.Scanner;
 
-public class EstruturasSequenciais3 {
+public class Exercicio3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int A, B, C, D;

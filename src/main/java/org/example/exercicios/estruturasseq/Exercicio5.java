@@ -1,9 +1,11 @@
-package org.example.exercicios;
+package org.example.exercicios.estruturasseq;
+
+import org.example.exercicios.Peca;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class EstruturasSequenciais5 {
+public class Exercicio5 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);

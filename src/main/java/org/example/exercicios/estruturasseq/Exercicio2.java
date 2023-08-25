@@ -1,9 +1,9 @@
-package org.example.exercicios;
+package org.example.exercicios.estruturasseq;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class EstruturasSequenciais2 {
+public class Exercicio2 {
 
     final static double PI = 3.14159;
 
