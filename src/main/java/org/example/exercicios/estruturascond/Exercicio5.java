@@ -30,5 +30,6 @@ public class Exercicio5 {
         } else {
             System.out.println("Insento");
         }
+        scanner.close();
     }
 }
