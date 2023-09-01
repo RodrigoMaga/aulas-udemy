@@ -4,17 +4,7 @@ import java.util.*;
 
 public class ExercicioBonus2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        String[] words = {"java", "programacao", "computador", "desenvolvimento", "algoritmo"};
-
-        String chosenWord = randomizeArray(words);
-
-        System.out.println(chosenWord);
-
-        System.out.println(letterCount(chosenWord));
-
-
+        gamePlay();
     }
 
     private static String randomizeArray(String[] array) {
@@ -25,9 +15,46 @@ public class ExercicioBonus2 {
     }
 
     private static void gamePlay() {
+        String[] words = {"java", "programacao", "computador", "desenvolvimento", "algoritmo"};
+        String chosenWord = randomizeArray(words);
+        System.out.println(chosenWord);
+        int tentativas = 1;
+        String chosenLetter = askInput("Informe a letra: ");
+        String[] rightLetters = {};
+
+        System.out.println("A palavra tem " + letterCount(chosenWord) + " letras");
+
+        while (tentativas <= 5) {
+
+            if (chosenLetter.equals(chosenWord)) {
+                System.out.println("Parabens");
+                return;
+            }
+            else if (chosenWord.contains(chosenLetter)) {
+                System.out.println(chosenLetter + " tem na palavra ");
+                System.out.println(chosenLetter + " esta na " + (chosenWord.indexOf(chosenLetter) + 1) + " posição");
+                chosenLetter = askInput("Informe outra letra");
+            }
+            else if (!chosenWord.contains(chosenLetter)) {
+                System.out.println(chosenLetter + " não tem na palavra");
+                chosenLetter = askInput("Informe outra letra");
+                tentativas++;
+            }
+            chosenWord.replaceAll("_", "a");
+        }
+    }
+
+    private static void letterPosition() {
 
     }
-    private static int letterCount(String word){
+
+    private static int letterCount(String word) {
         return word.length();
+    }
+
+    public static String askInput(String input) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(input);
+        return scanner.next();
     }
 }
