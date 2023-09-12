@@ -44,7 +44,6 @@ public class ExercicioBonus2 {
     }
 
     private static void letterPosition() {
-
     }
 
     private static int letterCount(String word) {
