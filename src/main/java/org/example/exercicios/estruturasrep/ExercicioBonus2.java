@@ -39,12 +39,10 @@ public class ExercicioBonus2 {
                 chosenLetter = askInput("Informe outra letra");
                 tentativas++;
             }
-
         }
     }
 
     private static void letterPosition() {
-
     }
 
     private static int letterCount(String word) {
